@@ -1,0 +1,134 @@
+.check {
+    color: #4caf50;
+}
+
+.check-err {
+    color: var(--global-color);
+}
+
+.product-detail {
+    background-color: var(--global-text-color);
+    & .product-content,
+    & .product-para {
+        padding: 15px 15px 20px;
+    }
+    & .product-name {
+        border-bottom: 1px solid #efefef;
+        padding-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    & .product-img {
+        padding: 0 20px 0 0;
+        & .slide-img {
+            width: 100%;
+        }
+        & .intro {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            color: var(--text-color);
+            margin-top: 25px;
+            padding: 0px 0px 0px 20px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.price {
+    line-height: 30px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.status {
+    font-size: 1.4rem;
+    font-weight: bold;
+    & .status2 {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        line-height: 2.5rem;
+        & .error-color {
+            color: red;
+        }
+    }
+}
+
+.color {
+    & .label {
+        display: inline-flex;
+        width: 26px;
+        height: 26px;
+        border: 1px solid #9b9b9b;
+        visibility: visible !important;
+        cursor: pointer;
+        font-size: 2.6rem;
+        align-items: center;
+    }
+
+    & .circle {
+        border-radius: 50%;
+    }
+
+    & input:checked ~ label {
+        border: 2px solid var(--global-color);
+    }
+}
+
+.promotion {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 40px 0 10px;
+    font-size: 1.3rem;
+    padding: 23px 10px 10px;
+    font-weight: bold;
+    & .promotion-title {
+        top: -13px;
+        left: 13px;
+        background: var(--global-color);
+        padding: 2px 10px;
+        background-size: 240px;
+        font-weight: bold;
+        color: var(--global-text-color);
+        border-radius: 4px;
+        font-size: 1.4rem;
+    }
+}
+
+.btn-buy {
+    font-size: 1.4rem;
+    background-color: var(--global-color);
+    border: none;
+    & .buy-icon {
+        display: flex;
+        font-size: 3.7rem;
+        align-self: center;
+    }
+
+    & .buy-title {
+        text-align: left;
+        & p:first-child {
+            font-size: 2.7rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.btn-buy:focus {
+    box-shadow: none;
+}
+
+.description-title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: normal;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-weight: bold;
+}

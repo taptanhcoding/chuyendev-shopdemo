@@ -1,0 +1,34 @@
+.menu_list-inner {
+    list-style: none;
+    padding: 0;
+
+    & li:not(:last-child) .item-link {
+        border-bottom: 1px solid #ccc;
+    }
+    & .item-link {
+        display: block;
+        box-sizing: border-box;
+        padding: 7px 0;
+        transition: 0.5s;
+        color: #000;
+        position: relative;
+        & .icon img {
+            width: 20px;
+            object-fit: contain;
+        }
+
+        & .item-title {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+    }
+    & li:hover {
+        background-color: var(--global-color);
+        & a {
+            color: var(--global-text-color);
+        }
+        & img {
+            filter: invert(1);
+        }
+    }
+}

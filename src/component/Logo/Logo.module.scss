@@ -1,0 +1,17 @@
+.band {
+    line-height: 1;
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+    & .band-title {
+        padding: 0 4px;
+        font-size: 2.3rem;
+        font-weight: 100;
+
+        & .band-phone {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+}

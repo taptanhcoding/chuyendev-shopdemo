@@ -1,0 +1,32 @@
+.wrapper {
+    background-color: var(--global-color);
+    border-radius: 10px;
+    color: #fff;
+    padding: 40px;
+
+    & .footer-list {
+        list-style: none;
+        & .footer-item {
+            font-size: 1.4rem;
+            & span {
+                font-weight: bold;
+            }
+        }
+        & .footer-item:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    & .pay-item {
+        padding: 10px 5px;
+        & img {
+            height: 34px;
+            width: unset;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+    }
+    & .copyright {
+        font-size: 1.4rem;
+    }
+}

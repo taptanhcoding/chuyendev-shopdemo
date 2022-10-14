@@ -1,0 +1,36 @@
+.support-item {
+    cursor: pointer;
+    & .support-icon {
+        font-size: 2.5rem;
+        width: 35px;
+        height: 35px;
+        background: #fff;
+        border-radius: 50%;
+        float: left;
+        position: relative;
+        color: var(--global-color);
+        overflow: hidden;
+    }
+}
+
+.wrap-user {
+    padding: 10px 0;
+    color: var(--text-color);
+
+    & .user-link {
+        display: block;
+        padding: 0 10px;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+    & .user-action:hover {
+        background-color: var(--global-color);
+        color: #fff;
+    }
+}
+
+.toast-user {
+    position: fixed;
+    top: 150px;
+    right: 40px;
+}

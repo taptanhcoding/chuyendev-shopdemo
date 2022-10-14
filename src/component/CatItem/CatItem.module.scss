@@ -1,0 +1,105 @@
+.wrapper {
+    width: auto;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e7e7e77d;
+    margin: 7px;
+    background: #fff;
+    padding-bottom: 10px;
+
+    & .discount {
+        background-color: #f7d704 !important;
+        color: #000000;
+        left: 10px;
+        padding: 1px 8px 1px 8px;
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        border-radius: 9px;
+        font-size: 11px;
+        font-weight: bold;
+        & span {
+            position: relative;
+            padding-left: 13px;
+        }
+        & svg {
+            position: absolute;
+            left: -5px;
+            top: -2px;
+            width: 15px;
+            height: 15px;
+            fill: #dc0000;
+        }
+        & label {
+            color: #dc0000;
+        }
+    }
+    & .text_small_3 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        background: #ff6800 !important;
+        color: #fff !important;
+        padding: 2px 5px;
+    }
+
+    & .text_small_3_2 {
+        top: 10px;
+        right: 10px;
+        bottom: auto;
+        left: auto;
+    }
+    & .wrapper-name {
+        padding: 10px 10px 0;
+
+        & .name {
+            color: #000;
+            display: block;
+            font-weight: normal;
+            line-height: 1.7rem;
+            font-size: 1.3rem;
+            height: 33px;
+        }
+    }
+
+    & .text-small_1 {
+        background-color: var(--feature-color);
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: bold;
+        padding-top: 5px;
+        height: 23px;
+    }
+
+    & .product-price {
+        padding: 10px 10px 0;
+        & .price_current {
+            color: #dc0000;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: inline-flex;
+        }
+        & .price {
+            color: #929292 !important;
+            font-size: 1.3rem;
+            font-weight: normal;
+            display: inline-flex;
+            margin-left: 13px;
+            text-decoration: line-through;
+        }
+        & .rate-item {
+            text-align: center;
+            color: #929292;
+            font-size: 1.2rem;
+            margin-top: 9px;
+            height: 18px;
+        }
+    }
+}
+
+.wrapper:hover .name {
+    color: var(--blue-color);
+}

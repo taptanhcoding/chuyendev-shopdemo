@@ -1,0 +1,22 @@
+.wrapper {
+    margin: 0;
+    padding: 6px 3%;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background: #fff;
+    clear: both;
+    border-bottom: 1px solid #eee;
+    & img {
+        width: 64px;
+        object-fit: contain;
+        margin-right: 20px;
+    }
+
+    & .product-name {
+    }
+
+    & .product-price {
+        color: var(--global-color);
+    }
+}

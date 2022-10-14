@@ -1,0 +1,17 @@
+.product-price {
+    padding: 10px 10px 0;
+    & .price_current {
+        color: #dc0000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: inline-flex;
+    }
+    & .price {
+        color: #929292 !important;
+        font-size: 1.3rem;
+        font-weight: normal;
+        display: inline-flex;
+        margin-left: 13px;
+        text-decoration: line-through;
+    }
+}

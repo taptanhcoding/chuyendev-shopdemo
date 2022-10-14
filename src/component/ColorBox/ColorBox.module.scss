@@ -1,0 +1,18 @@
+.label {
+    display: inline-flex;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #9b9b9b;
+    visibility: visible !important;
+    cursor: pointer;
+    font-size: 2.6rem;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+input:checked ~ label {
+    border: 2px solid var(--global-color);
+}

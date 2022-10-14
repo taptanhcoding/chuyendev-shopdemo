@@ -1,0 +1,32 @@
+.top_menu {
+    width: 226px;
+    float: left;
+    z-index: 10;
+    & .product_menu_ul {
+        left: 0px;
+        top: 100%;
+        width: 100%;
+        z-index: 11;
+        opacity: 1;
+    }
+}
+
+.slideshow {
+    width: 75.7%;
+    position: relative;
+    padding-left: 241px;
+    box-sizing: border-box;
+}
+
+.countdown {
+    width: calc(24% - 15px);
+    top: 0;
+    right: 15px;
+
+    & img:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.post1 {
+}

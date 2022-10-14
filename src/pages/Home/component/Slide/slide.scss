@@ -1,0 +1,14 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+ul .slick-active div {
+    background-color: var(--global-color) !important;
+}
+
+.slick-list .slick-slide div {
+    background-color: #fff;
+}
+
+.slick-list .slick-slide.slick-active.slick-current div {
+    color: var(--global-color);
+}

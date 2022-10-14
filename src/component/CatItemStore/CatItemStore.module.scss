@@ -1,0 +1,27 @@
+.wrapper {
+    background-color: var(--global-text-color);
+    width: 100%;
+    & .cat-title {
+        width: 300px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 540;
+        text-transform: uppercase;
+        background: #ff0000;
+        padding: 13px 10px 9px 80px;
+        &::before {
+            content: '';
+            border: 5px solid var(--global-color);
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+    }
+
+    & .bot-block {
+        padding: 0 15px 15px;
+    }
+}

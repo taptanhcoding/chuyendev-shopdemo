@@ -1,0 +1,91 @@
+.wrapper {
+    background-color: var(--global-color);
+    color: var(--global-text-color);
+    padding: 8px 0px 6px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 5000;
+}
+
+.band {
+    line-height: 1;
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+    & .band-title {
+        padding: 0 4px;
+        font-size: 2.3rem;
+        font-weight: 100;
+
+        & .band-phone {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+}
+
+.search {
+    width: 32%;
+
+    & input {
+        border: none;
+        background: #fff;
+        width: 100%;
+        height: 38px;
+        border-radius: 5px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        font-size: 13px;
+        font-style: italic;
+        padding-right: 42px;
+    }
+
+    & input:focus-visible {
+        outline: none;
+        border: none;
+    }
+
+    & .btn-search {
+        font-size: 2rem;
+        color: #000;
+        width: 42px;
+        height: 35px;
+        position: absolute;
+        background: #ffffff;
+        border: none;
+        right: 0;
+        top: 0px;
+        border-radius: 0 4px 4px 0;
+    }
+}
+
+.support {
+    font-size: 1.4rem;
+    & .box {
+        width: 440px;
+        margin-left: -100px;
+    }
+
+    & .support-item {
+        & .support-icon {
+            font-size: 2.5rem;
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            border-radius: 50%;
+            float: left;
+            position: relative;
+            color: var(--global-color);
+        }
+    }
+
+    & .quanity {
+        font-size: 1.5rem;
+        font-weight: 500;
+        top: 0;
+    }
+}

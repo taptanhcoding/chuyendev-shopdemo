@@ -1,0 +1,62 @@
+.slide-item {
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+.head-title {
+    color: red;
+}
+
+// bao phủ tất cả
+.slide {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.2rem;
+    position: relative;
+}
+
+//css nút next,prevs
+.btn-trans {
+    top:0;
+    bottom: 0;
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    z-index: 50;
+}
+
+.btn-trans:hover {
+    opacity: 1;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.btn-prevs {
+    left: 0;
+}
+//css phần img
+.slide-img {
+    width: 100%;
+    float: left;
+    margin-right: -100%;
+    position: relative;
+    opacity: 0;
+    display: block;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+}
+
+.slide-img.active {
+    opacity: 1;
+    z-index: 5;
+}
+
+.carousel-box.active {
+    background-color: #fff;
+}
+

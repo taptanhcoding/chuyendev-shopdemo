@@ -1,0 +1,43 @@
+.search {
+    & input {
+        border: none;
+        background: #fff;
+        width: 100%;
+        height: 38px;
+        border-radius: 5px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        font-size: 13px;
+        font-style: italic;
+        padding-right: 42px;
+    }
+
+    & input:focus-visible {
+        outline: none;
+        border: none;
+    }
+
+    & .btn-search {
+        font-size: 2rem;
+        color: #000;
+        width: 42px;
+        height: 35px;
+        position: absolute;
+        background: #ffffff;
+        border: none;
+        right: 0;
+        top: 0px;
+        border-radius: 0 4px 4px 0;
+    }
+}
+
+.search {
+    width: 330px;
+}
+.box {
+    width: 400px;
+}
+
+.box {
+    color: var(--text-color);
+}

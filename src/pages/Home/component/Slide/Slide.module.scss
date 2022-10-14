@@ -1,0 +1,71 @@
+.slide-item {
+    width: 668px;
+    margin: 0 auto;
+}
+
+.head-title {
+    color: red;
+}
+
+// bao phủ tất cả
+.slide {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.2rem;
+    position: relative;
+}
+
+//css phần img
+
+.slide-img {
+    float: left;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.slide-desc {
+    text-align: center;
+    color: var(--text-color);
+    border-right: 1px solid #e7e7e791;
+    height: 68px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    line-height: 20px;
+    cursor: pointer;
+}
+//css dots
+.my-dots {
+    flex-direction: row;
+    list-style: none;
+    bottom: 10px;
+    right: 40px;
+    & li {
+        margin-left: 5px;
+    }
+
+    & .dots {
+        width: 20px;
+        height: 20px;
+        background-color: #cccccc;
+        border-radius: 50%;
+    }
+    & .img-dots img {
+        width: 50px;
+        object-fit: contain;
+    }
+}
+//Css button
+.next-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
