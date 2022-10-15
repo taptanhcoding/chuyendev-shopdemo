@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { money } from '~/app/money';
 import styles from './Price.module.scss';
 
 const cx = classNames.bind(styles);
@@ -9,14 +10,14 @@ function Price({ className, price, currentPrice, fsPrice, fsCurrent }) {
             {currentPrice ? (
                 <>
                     <div className={cx('price_current')} style={{ fontSize: fsCurrent }}>
-                        {currentPrice}
+                        {money(currentPrice)}
                     </div>
                     <div className={cx('price')} style={{ fontSize: fsPrice }}>
-                        {price}
+                        {money(price)}
                     </div>
                 </>
             ) : (
-                <div className={cx('price_current')}>{price}</div>
+                <div className={cx('price_current')}>{money(price)}</div>
             )}
         </div>
     );

@@ -7,6 +7,7 @@ const routes = {
     category: '/products/:category',
     verification: '/verification/:token',
     detail: '/detail/:name',
+    search: '/search/q=:keyword',
 };
 
 export default routes;

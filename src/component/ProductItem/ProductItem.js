@@ -12,7 +12,7 @@ function ProductItem({ data }) {
                 <span className={cx('product-name', 'text-limit')} title={data.name}>
                     {data.name}
                 </span>
-                <Price className={cx('product-price')} price={'549.000 đ'} />
+                <Price className={cx('product-price')} price={data.price} currentPrice={data.new_price} />
             </div>
         </Link>
     );

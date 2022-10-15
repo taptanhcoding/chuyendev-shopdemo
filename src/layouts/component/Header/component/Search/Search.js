@@ -8,17 +8,25 @@ import Wrapper from '~/component/Wrapper/Wrapper';
 import { useState } from 'react';
 import ProductItem from '~/component/ProductItem/ProductItem';
 import { search } from '~/service/searchService';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 function Search() {
+    const navigate = useNavigate();
     const [showHeadless, setShowHeadless] = useState(false);
     const [searchResult, setSearchResult] = useState([]);
+    const [searchkey, setSearchKey] = useState('');
 
     const handleSearch = async (e) => {
         if (e.target.value.trim() != '') {
+            setSearchKey(e.target.value);
             let dataSearch = await search({ params: { q: e.target.value } });
             setSearchResult(dataSearch);
         } else setSearchResult([]);
+    };
+
+    const searchToPage = () => {
+        navigate(`/search/q=${searchkey}`);
     };
     return (
         <>
@@ -49,9 +57,13 @@ function Search() {
                         placeholder="Tìm kiếm sản phẩm trên chuyendev"
                         onFocus={() => setShowHeadless(true)}
                     />
-                    <div className={cx('btn-search', 'd-flex', 'align-items-center', 'justify-content-center')}>
+                    <button
+                        className={cx('btn-search', 'd-flex', 'align-items-center', 'justify-content-center')}
+                        onClick={searchToPage}
+                        disabled={!searchkey}
+                    >
                         <AiOutlineSearch />
-                    </div>
+                    </button>
                 </div>
             </HeadlessTippy>
         </>

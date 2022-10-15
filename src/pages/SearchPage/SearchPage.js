@@ -4,46 +4,41 @@ import { slides } from '~/assets/slide';
 import products from '~/assets/products';
 
 import classNames from 'classnames/bind';
-import styles from './Category.module.scss';
+import styles from './SearchPage.module.scss';
 import TopContent from '~/component/TopContent/TopContent';
 import CatItem from '~/component/CatItem/CatItem';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getProduct } from '~/service/productService';
+import { search } from '~/service/searchService';
 import Paging from '~/component/Paging/Paging';
 
 const cx = classNames.bind(styles);
 
-function Category() {
-    const { category } = useParams();
+function SearchPage() {
+    const { keyword } = useParams();
     const [products, setProducts] = useState({});
-    const [page, setPage] = useState({ page: 1, category: category });
+    const [searchParams, setSearchParams] = useState({ q: keyword, page: 1 });
     useEffect(() => {
-        setPage((prev) => ({ ...prev, category }));
-    }, [category]);
+        setSearchParams((prev) => ({ ...prev, q: keyword }));
+    }, [keyword]);
 
     useEffect(() => {
         const Product = async () => {
-            const listProducts = await getProduct(`${page.category}?page=${page.page}`);
-            setProducts(listProducts);
+            let dataSearch = await search({ params: { q: searchParams.q, page: searchParams.page } });
+            setProducts(dataSearch);
         };
 
         Product();
-    }, [page]);
+    }, [searchParams]);
     return (
         <div className={cx('wrapper', 'container')}>
-            <TopContent data={[category]} />
+            <TopContent data={['Tìm kiếm']} />
             <div className={cx('inner-content', 'mt-4')}>
                 <div className={cx('inner-header', 'd-flex', 'justify-content-between', 'align-items-center')}>
-                    <span className={cx('category')}>{category}</span>
-                    <div className={cx('filter')}>
-                        <select className={cx('custom-select')}>
-                            <option defaultValue={null}>Sắp xếp theo</option>
-                            <option defaultValue="1">Giá từ thấp tới cao</option>
-                            <option defaultValue="2">Giá từ cao tới thấp</option>
-                            <option defaultValue="3">Mới nhất</option>
-                        </select>
-                    </div>
+                    <span className={cx('category')}>
+                        có {products.total || 0} sản phẩm với từ khóa: {keyword}
+                    </span>
                 </div>
                 <div className={cx('inner-content')}>
                     {products.data && products.data.length == 0 ? (
@@ -62,11 +57,11 @@ function Category() {
                     )}{' '}
                 </div>
                 <div className={cx('inner-paging')}>
-                    <Paging total_pages={products.total_pages} page={page.page} onClick={setPage} />
+                    <Paging total_pages={products.total_pages} page={searchParams.page} onClick={setSearchParams} />
                 </div>
             </div>
         </div>
     );
 }
 
-export default Category;
+export default SearchPage;

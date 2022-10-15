@@ -7,11 +7,16 @@ import Detail from '~/pages/Detail/Detail';
 import Home from '~/pages/Home/Home';
 import Insurance from '~/pages/Insurance/Insurance';
 import Profile from '~/pages/Profile/Profile';
+import SearchPage from '~/pages/SearchPage/SearchPage';
 
 const publicRoutes = [
     {
         path: routes.home,
         element: Home,
+    },
+    {
+        path: routes.search,
+        element: SearchPage,
     },
     {
         path: routes.cart,

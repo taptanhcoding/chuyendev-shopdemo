@@ -55,7 +55,7 @@ function Header() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
-                <div className={cx('row', 'm-0', 'align-items-center', 'justify-content-between')}>
+                <div className={cx('row', 'm-0', 'align-items-center', 'justify-content-between', 'flex-nowrap')}>
                     <Logo />
                     <Search />
                     <div className={cx('support', 'row', 'm-0')}>
@@ -70,7 +70,7 @@ function Header() {
                                 </div>
                             )}
                         >
-                            <div className={cx('support-item', 'm-0', 'row', 'align-items-center', 'mr-4')}>
+                            <div className={cx('support-item', 'm-0', 'row', 'align-items-center', 'mr-4', 'contact')}>
                                 <div
                                     className={cx(
                                         'support-icon',

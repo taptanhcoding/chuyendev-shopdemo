@@ -11,7 +11,7 @@ function Footer() {
     return (
         <div className={cx('wrapper', 'mt-4', 'container')}>
             <div className={cx('row')}>
-                <div className={cx('col-lg-6', 'row', 'm-0')}>
+                <div className={cx('col-sm-6', 'col-12', 'row', 'm-0')}>
                     <FooterItem className={cx('col-lg-6', 'p-0')} title={'CHUYENDEV'}>
                         <ul className={cx('footer-list')}>
                             <li className={cx('footer-item')}>
@@ -71,7 +71,7 @@ function Footer() {
                         </ul>
                     </FooterItem>
                 </div>
-                <FooterItem className={cx('col-lg-6')} title={'hệ thống của hàng'}>
+                <FooterItem className={cx('col-sm-6', 'col-12')} title={'hệ thống của hàng'}>
                     <ul className={cx('footer-list')}>
                         <li className={cx('footer-item')}>
                             <span>- Địa chỉ mua hàng: </span>Số 2 Lê Văn Thiêm, Nhân Chính, Thanh Xuân, Hà Nội

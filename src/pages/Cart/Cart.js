@@ -76,18 +76,22 @@ function Cart() {
         // addCartApi
     }, [cart]);
     const handleOrder = async (data) => {
-        const detailOrder = {
-            customer_id: user._id,
-            ...data,
-            detailOrder: cartToUp(cart),
-            totalPay: money(totalAll),
-        };
-        console.log(detailOrder);
-        const result = await orderCartApi(user._id, detailOrder);
-        if (result.status) {
-            dispatch(removeAllCart());
+        if (user.active) {
+            const detailOrder = {
+                customer_id: user._id,
+                ...data,
+                detailOrder: cartToUp(cart),
+                totalPay: money(totalAll),
+            };
+            console.log(detailOrder);
+            const result = await orderCartApi(user._id, detailOrder);
+            if (result.status) {
+                dispatch(removeAllCart());
+            }
+            setReturnCart(result);
+        } else {
+            alert('bạn chưa active tài khoản,vui lòng kiểm tra email');
         }
-        setReturnCart(result);
     };
     const handleBack = () => {
         navigate(-1);
@@ -181,7 +185,7 @@ function Cart() {
                         <div className={cx('detail-pay', 'col-3')}>
                             <h1 className={cx('detail-title')}>địa chỉ nhận hàng</h1>
                             <div className={cx('detail-card')}>
-                                {user ? (
+                                {user && Object.values(user).length > 0 ? (
                                     <form onSubmit={handleSubmit(handleOrder)}>
                                         <div className={cx('form-group row')}>
                                             <div className={cx('col-sm-10')}>

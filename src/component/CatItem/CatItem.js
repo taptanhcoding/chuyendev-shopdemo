@@ -28,7 +28,7 @@ function CatItem({ data }) {
             </h3>
 
             {data.special && <div className={cx('text-small_1', 'text-limit', 'text-center')}>{data.special}</div>}
-            <Price price={'499.000 đ'} currentPrice={'419.000 đ'} />
+            <Price price={data.price} currentPrice={data.new_price} />
             <div className={cx('rate-item')}> </div>
         </div>
     );
